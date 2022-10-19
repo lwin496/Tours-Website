@@ -19,12 +19,12 @@ const Card = () => {
                               {place.map((place) => { 
                                     const {id, name, info, image, price} = place
                                     return (
-                                          <li key={id}>
+                                          <li key={id} className='py-6 flex flex-col'>
                                                 <img src={image} alt={name} />
-                                                <h4>{name}</h4>
-                                                <h5>{price}</h5>
-                                                <p>{info}</p>
-                                                <button onClick={()=> {remove(id)}}>Remove</button>
+                                                <h4 className='text-teal-700 text-3xl py-5 bg-gray-100'>{name}</h4>
+                                                <h5 className='text-xl pb-2 bg-gray-100'>{price}.00$</h5>
+                                                <p className='py-5 bg-gray-100'>{info}</p>
+                                                <button className='pt-1 m-auto text-red-700'>Remove</button>
                                           </li>
                                     )
                               })}
